@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Data Department Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: #38bdf8;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .doc-item {
+            border-left: 3px solid transparent;
+            transition: all 0.2s ease;
+        }
+        .doc-item:hover {
+            border-left-color: #818cf8;
+            background: rgba(255, 255, 255, 0.05);
+            padding-left: 1rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Navigation Header -->
+    <header class="p-6 border-b border-slate-800 flex justify-between items-center sticky top-0 bg-slate-900/80 backdrop-blur-md z-50">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center shadow-lg shadow-sky-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+            <h1 class="text-2xl font-bold tracking-tight">AI & <span class="gradient-text">Data</span></h1>
+        </div>
+        <div class="text-sm font-medium text-slate-400">Departmental Resource Hub</div>
+    </header>
+
+    <main class="flex-grow p-8 max-w-7xl mx-auto w-full">
+        
+        <!-- Quick Links Section -->
+        <section class="mb-16">
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold mb-2">Core Platform Access</h2>
+                <p class="text-slate-400 text-sm">Instant access to our primary data and project environments.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <a href="https://console.cloud.google.com/bigquery?project=ai-data-analytics-project-1&ws=!1m0" target="_blank" class="glass-card p-6 rounded-2xl group">
+                    <div class="text-sky-400 mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18l8 4v7.64l-8 4-8-4V8.18l8-4zM12 6.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z"/></svg>
+                    </div>
+                    <span class="text-lg font-bold">BigQuery</span>
+                    <p class="text-xs text-slate-400 mt-2">Data Warehousing & SQL Analytics</p>
+                </a>
+
+                <a href="https://ditops.atlassian.net/jira/software/projects/AID/issues?jql=project%20%3D%20AID%20ORDER%20BY%20created%20DESC" target="_blank" class="glass-card p-6 rounded-2xl group">
+                    <div class="text-blue-400 mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3l5-4h3c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1h-10zm1.5 12h-4v-2h4v2zm3-4h-7V8h7v2z"/></svg>
+                    </div>
+                    <span class="text-lg font-bold">Jira</span>
+                    <p class="text-xs text-slate-400 mt-2">Agile Project & Issue Tracking</p>
+                </a>
+
+                <a href="https://cloud.airbyte.com/organization/dbd29fb5-1b33-46c4-9490-abc64a97c816/workspaces" target="_blank" class="glass-card p-6 rounded-2xl group">
+                    <div class="text-teal-400 mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                    </div>
+                    <span class="text-lg font-bold">Airbyte</span>
+                    <p class="text-xs text-slate-400 mt-2">Data Integration & ETL Pipelines</p>
+                </a>
+
+                <a href="https://39fcfaf6-08ff-4071-a3a0-a06f5daeda3a.looker.app/browse" target="_blank" class="glass-card p-6 rounded-2xl group">
+                    <div class="text-indigo-400 mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/></svg>
+                    </div>
+                    <span class="text-lg font-bold">Looker</span>
+                    <p class="text-xs text-slate-400 mt-2">BI & Enterprise Data Modeling</p>
+                </a>
+
+                <a href="https://lookerstudio.google.com/navigation/project/356068625801" target="_blank" class="glass-card p-6 rounded-2xl group">
+                    <div class="text-purple-400 mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg>
+                    </div>
+                    <span class="text-lg font-bold">Looker Studio</span>
+                    <p class="text-xs text-slate-400 mt-2">Self-Service Visualization & Reports</p>
+                </a>
+
+                <a href="https://workspace.google.com/dashboard" target="_blank" class="glass-card p-6 rounded-2xl group">
+                    <div class="text-yellow-400 mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
+                    </div>
+                    <span class="text-lg font-bold">Google Workspace</span>
+                    <p class="text-xs text-slate-400 mt-2">Communication & Admin Dashboard</p>
+                </a>
+
+                <a href="https://drive.google.com/drive/home" target="_blank" class="glass-card p-6 rounded-2xl group col-span-1 lg:col-span-2">
+                    <div class="text-green-400 mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M15.74 3L22 13.8l-3.35 5.85L12.4 8.85 15.74 3zM9.18 4.92L15.84 16.5H9.15L2.5 4.92h6.68zm1.88 12.6h11.22L18.9 22H7.78l3.28-4.48z"/></svg>
+                    </div>
+                    <span class="text-lg font-bold">Google Drive</span>
+                    <p class="text-xs text-slate-400 mt-2 text-balance">Shared Team Storage & Documentation Assets</p>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Documentation & Useful Resources Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <div class="glass-card p-8 rounded-3xl bg-slate-900/40">
+                <div class="flex items-center gap-3 mb-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <h2 class="text-xl font-bold">Important Documentation</h2>
+                </div>
+                
+                <div class="space-y-2">
+                    <!-- Documentation Link Placeholders -->
+                    <a href="https://ditops.atlassian.net/wiki/spaces/AID/pages/3723591687/Medallion+Architecture+in+BigQuery" class="doc-item flex items-center justify-between p-3 rounded-lg text-slate-300">
+                        <div class="flex flex-col">
+                            <span class="font-medium text-slate-100 italic">Medallion Architecture (Latest)</span>
+                            <span class="text-xs text-slate-500 italic">Updated April 14, 2026</span>
+                        </div>
+                        <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    </a>
+                    
+                    <a href="https://ditops.atlassian.net/wiki/spaces/AID/pages/3500802051/HowTo+-+Move+data+from+Oracle+to+BigQuery" class="doc-item flex items-center justify-between p-3 rounded-lg text-slate-300">
+                        <div class="flex flex-col">
+                            <span class="font-medium text-slate-100 italic">How-To: Move data from Oracle to BigQuery</span>
+                            <span class="text-xs text-slate-500 italic">BigQuery RLS & Access Protocols</span>
+                        </div>
+                        <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    </a>
+
+                    <a href="https://ditops.atlassian.net/wiki/spaces/AID/pages/3738566662/HowTo+-+Dataform+Medallion+Architecture+Guide" class="doc-item flex items-center justify-between p-3 rounded-lg text-slate-300">
+                        <div class="flex flex-col">
+                            <span class="font-medium text-slate-100 italic">How-To Dataform</span>
+                            <span class="text-xs text-slate-500 italic">Airbyte Source-to-Sink Mappings</span>
+                        </div>
+                        <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    </a>
+
+                    <a href="https://ditops.atlassian.net/wiki/spaces/AID/pages/3669884935/HowTo+-+Create+BigQuery+Column+Masking+Policies" class="doc-item flex items-center justify-between p-3 rounded-lg text-slate-300">
+                        <div class="flex flex-col">
+                            <span class="font-medium text-slate-100 italic">How-To BigQuery Masking Capabilities</span>
+                            <span class="text-xs text-slate-500 italic">Airbyte Source-to-Sink Mappings</span>
+                        </div>
+                        <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    </a>
+
+                    <a href="https://bitbucket.org/gcp-chatt/workspace/repositories/" class="doc-item flex items-center justify-between p-3 rounded-lg text-slate-300">
+                        <div class="flex flex-col">
+                            <span class="font-medium text-slate-100 italic">bitbucket</span>
+                            <span class="text-xs text-slate-500 italic">Airbyte Source-to-Sink Mappings</span>
+                        </div>
+                        <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    </a>
+
+                    <div class="pt-4 border-t border-slate-800 mt-4">
+                        <button class="w-full py-3 border-2 border-dashed border-slate-800 rounded-xl text-slate-600 hover:text-slate-400 hover:border-slate-700 transition-all text-sm font-medium italic">
+                            + Add New Document Link
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Department Status / Updates -->
+            <div class="bg-gradient-to-br from-indigo-900/20 to-sky-900/20 p-8 rounded-3xl border border-sky-500/10">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-3">
+                    <span class="flex h-3 w-3 relative">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                    </span>
+                    Operational Status
+                </h2>
+                
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center p-4 bg-slate-900/50 rounded-xl">
+                        <span class="text-sm font-medium">BigQuery Availability</span>
+                        <span class="text-xs font-bold text-green-400 uppercase tracking-widest px-2 py-1 bg-green-400/10 rounded">Online</span>
+                    </div>
+                    <div class="flex justify-between items-center p-4 bg-slate-900/50 rounded-xl">
+                        <span class="text-sm font-medium">Airbyte Sync Latency</span>
+                        <span class="text-xs font-bold text-sky-400 uppercase tracking-widest px-2 py-1 bg-sky-400/10 rounded">Normal</span>
+                    </div>
+                    <div class="flex justify-between items-center p-4 bg-slate-900/50 rounded-xl opacity-60">
+                        <span class="text-sm font-medium">Upcoming Maintenance</span>
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest px-2 py-1 bg-amber-400/10 rounded">April 20</span>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-6 bg-sky-500/5 rounded-2xl border border-sky-500/20">
+                    <p class="text-xs font-bold text-sky-500 uppercase mb-2">Team Update</p>
+                    <p class="text-sm text-slate-300 leading-relaxed italic">
+                        "The migration of the PoliceIncident and GunViolenceDashboard datasets to the 'Gold' layer is now 85% complete. Please update your Looker Studio datasources by EOD Friday."
+                    </p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="p-8 border-t border-slate-900 text-center text-slate-600 text-xs">
+        <p>&copy; 2026 Chattanooga AI & Data Department | Internal Use Only</p>
+        <div class="flex justify-center gap-4 mt-2">
+            <a href="#" class="hover:text-slate-400">Security Policy</a>
+            <span>&bull;</span>
+            <a href="#" class="hover:text-slate-400">System Logs</a>
+            <span>&bull;</span>
+            <a href="#" class="hover:text-slate-400">Support Desk</a>
+        </div>
+    </footer>
+
+</body>
+</html>
